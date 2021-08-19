@@ -2,10 +2,10 @@ function [matlabList] = toMatlabList(arraylist, varargin)
 % TOMATLABLIST Convert a Java ArrayList into a MATLAB array or cell array
 %
 %    matlabList = toMatlabList(arraylist) converts a java.util.ArrayList
-%    into a Matlab array or cell array.
+%    into a MATLAB array or cell array.
 %
 %    matlabList = toMatlabList(arraylist, classname) converts a
-%    java.util.ArrayList into a Matlab array or cell array and cast each
+%    java.util.ArrayList into a MATLAB array or cell array and cast each
 %    element using the input classname.
 %
 %    Examples:
@@ -49,7 +49,7 @@ else
     classname = ip.Results.classname;
 end
 
-% Initialize Matlab list
+% Initialize MATLAB list
 numericclasses = {'int8', 'uint8', 'int16', 'uint16', 'int32', 'uint32',...
     'int64', 'uint64', 'single', 'double'};
 if ismember(classname, numericclasses)
@@ -65,7 +65,7 @@ else
     end
 end
 
-% Fill Matlab array with elements
+% Fill MATLAB array with elements
 for i = 0 : nElements - 1,
     if iscell(matlabList),
         matlabList{i+1} = arraylist.get(i);

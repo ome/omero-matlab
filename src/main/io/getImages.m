@@ -102,7 +102,7 @@ if isempty(ip.Results.project) && isempty(ip.Results.dataset)
         imageList = proxy.getImages('omero.model.Image', ids, parameters, context);
     end
     
-    % Convert java.util.ArrayList into Matlab arrays
+    % Convert java.util.ArrayList into MATLAB arrays
     images = toMatlabList(imageList);
     
 else

@@ -89,7 +89,7 @@ function ice_config = getDefaultConfigFile()
 ice_config = getenv('ICE_CONFIG');
 if isValidFile(ice_config), return; end
 
-% Then in the Matlab path
+% Then in the MATLAB path
 ice_config = which('ice.config');
 if isValidFile(ice_config), return; end
 

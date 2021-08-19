@@ -2,7 +2,7 @@
 
 [![Actions Status](https://github.com/ome/omero-matlab/workflows/Gradle/badge.svg)](https://github.com/ome/omero-matlab/actions)
 
-OMERO Matlab client library
+OMERO MATLAB client library
 
 ## Usage
 

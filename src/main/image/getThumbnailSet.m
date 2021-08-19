@@ -109,7 +109,7 @@ for i = 1 : nThumbnails
     if isempty(byteArray)
         thumbnailSet(i).thumbnail = [];
     else
-        % Convert byteArray into Matlab image
+        % Convert byteArray into MATLAB image
         stream = java.io.ByteArrayInputStream(pairs.getValue());
         image = javax.imageio.ImageIO.read(stream);
         stream.close();

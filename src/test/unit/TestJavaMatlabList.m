@@ -1,4 +1,4 @@
-% Helper for the java/Matlab list conversion unit tests
+% Helper for the java/MATLAB list conversion unit tests
 
 % Copyright (C) 2013 University of Dundee & Open Microscopy Environment.
 % All rights reserved.

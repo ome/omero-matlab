@@ -7,7 +7,7 @@ function [client, session] = loadOmero(varargin)
 %   your static classpath via classpath.txt, it will take priority. Please
 %   remove it to use loadOmero)
 %
-%   client = loadOmero() adds OMERO.matlab to the Matlab path and Java
+%   client = loadOmero() adds OMERO.matlab to the MATLAB path and Java
 %   class path and connects to a server using the properties specified by
 %   the ice.config file at the root of the OMERO.matlab directory.
 %
@@ -15,14 +15,14 @@ function [client, session] = loadOmero(varargin)
 %   using the properties specified in the ice.config file at the root of
 %   the OMERO.matlab directory.
 %
-%   client = loadOmero(server) adds OMERO.matlab to the Matlab path and
+%   client = loadOmero(server) adds OMERO.matlab to the MATLAB path and
 %   Java class path and connects to the input server.
 %
-%   client = loadOmero(server, port) adds OMERO.matlab to the Matlab path
+%   client = loadOmero(server, port) adds OMERO.matlab to the MATLAB path
 %   and Java class path and connects to the input server using the input
 %   port number
 %
-%   client = loadOmero(properties) adds OMERO.matlab to the Matlab path
+%   client = loadOmero(properties) adds OMERO.matlab to the MATLAB path
 %   and Java class path and connects to a server using the value of
 %   'omero.host' stored in the input properties of java.util.Properties.
 %
@@ -30,7 +30,7 @@ function [client, session] = loadOmero(varargin)
 %   the values of 'omero.user' and 'omero.pass' stored in the input
 %   properties.
 %
-%   client = loadOmero(config_file) adds OMERO.matlab to the Matlab path
+%   client = loadOmero(config_file) adds OMERO.matlab to the MATLAB path
 %   and Java class path and connects to the input server using the Ice
 %   configuration file located in the input config_file path.
 %

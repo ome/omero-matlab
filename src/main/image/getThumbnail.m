@@ -73,7 +73,7 @@ store.setPixelsId(image.getPrimaryPixels().getId().getValue(), context);
 byteArray = store.getThumbnail(width, height, context);
 store.close();
 
-% Convert byteArray into Matlab image
+% Convert byteArray into MATLAB image
 stream = java.io.ByteArrayInputStream(byteArray);
 image = javax.imageio.ImageIO.read(stream);
 stream.close();
