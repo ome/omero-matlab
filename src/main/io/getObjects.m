@@ -128,6 +128,6 @@ if ~isempty(parameters.getOrphan()) && parameters.getOrphan().getValue()
     end
 end
 
-% Convert java.util.ArrayList into Matlab arrays
+% Convert java.util.ArrayList into MATLAB arrays
 objects = toMatlabList(objectList);
 orphans = toMatlabList(orphanList);

@@ -103,7 +103,7 @@ catch ME
 end
 
 try
-    % Remove OMERO.matlab from Matlab path
+    % Remove OMERO.matlab from MATLAB path
     rmpath(genpath(findOmero))
 catch ME
     warning(path_old.state, PATHWARNID);

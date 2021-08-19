@@ -88,5 +88,5 @@ for i = annotationList.size - 1 : -1 : 0
     end
 end
 
-% Convert java.util.ArrayList into Matlab arrays
+% Convert java.util.ArrayList into MATLAB arrays
 annotations = toMatlabList(annotationList);

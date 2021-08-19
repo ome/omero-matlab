@@ -19,7 +19,7 @@ javaaddpath(which('blitz.jar'));
 javaaddpath(which('ini4j.jar'));
 javaaddpath(which('omero_client.jar'));
 
-% Add jar-fix for Matlab
+% Add jar-fix for MATLAB
 if ismac
     java.lang.System.setProperty('java.util.prefs.PreferencesFactory','java.util.prefs.MacOSXPreferencesFactory');
 end

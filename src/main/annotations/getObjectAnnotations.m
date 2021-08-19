@@ -181,7 +181,7 @@ if ip.Results.flatten
         end
     end
 
-    % Convert java.util.ArrayList into a Matlab array
+    % Convert java.util.ArrayList into a MATLAB array
     annotations = toMatlabList(annotationList);
 else
     annotationList = cell(ids.size(), 1);
