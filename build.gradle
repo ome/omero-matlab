@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation("org.openmicroscopy:omero-gateway:5.6.9")
+    implementation("org.openmicroscopy:omero-gateway:5.6.10")
 }
 
 
