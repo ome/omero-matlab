@@ -32,4 +32,4 @@ OMERO.matlab is released under the GPL v2.
 
 ## Copyright
 
-2018-2023, The Open Microscopy Environment, Glencoe Software, Inc.
+2013-2023, The Open Microscopy Environment, Glencoe Software, Inc.
