@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [8, 11]
+        java: [11]
         os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     env:
@@ -19,17 +19,22 @@ jobs:
       gradle_commands: build # default is build
       artifact_dir: build/distributions/*
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Java ${{ matrix.java }} and Gradle 
-        uses: ome/action-gradle@v3.2
+      - uses: actions/checkout@v4
+      - name: Set up JDK ${{ matrix.java }}
+        uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java }}
+          distribution: 'zulu'
+          cache: 'gradle'
+          java-package: 'jdk'
+      - uses: gradle/actions/setup-gradle@v3
+        with:
           gradle-version: ${{ env.gradle_version }}
       - name: Run commands
         run: gradle ${{ env.gradle_commands }}
       - name: Upload artifacts
-        if: startsWith(matrix.os, 'ubuntu') && matrix.java == '8'
-        uses: actions/upload-artifact@v2
+        if: startsWith(matrix.os, 'ubuntu') && matrix.java == '11'
+        uses: actions/upload-artifact@v4
         with:
           name: artifacts
           path: ${{ env.artifact_dir }}
@@ -43,7 +48,7 @@ jobs:
       publishing_target: github # default is github
     steps:
       - name: Download artifacts from build
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
       - name: List artifacts
         run: ls -R
       - name: Upload binaries to release
