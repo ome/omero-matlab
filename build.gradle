@@ -6,6 +6,10 @@ plugins {
 group = "org.openmicroscopy"
 version = "5.5.7-SNAPSHOT"
 
+compileJava {
+    options.release = 8
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
